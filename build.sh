@@ -219,6 +219,11 @@ if [ -d "$DIR_ROOT/kernel_platform/" ] && (
     if [ "${FLAG_CLEAN_BUILD}" = 'y' ] || [ "${FLAG_INSTALLCLEAN_BUILD}" = 'y' ]; then
         EXTRA_KERNEL_FLAGS+=' RECOMPILE_KERNEL=1'
         [ -d "${TARGET_KERNEL_OUT}" ] && rm -r "${TARGET_KERNEL_OUT}"
+    else
+        EXTRA_KERNEL_FLAGS+=' RECOMPILE_KERNEL=0'
+        EXTRA_KERNEL_FLAGS+=' RECOMPILE_EXT_MODULE=0'
+        EXTRA_KERNEL_FLAGS+=' RECOMPILE_TECHPACK_DTBO=0'
+        EXTRA_KERNEL_FLAGS+=' RECOMPILE_MERGE_DTBS=0'
     fi
     eval "${EXTRA_KERNEL_FLAGS}" ANDROID_KERNEL_OUT="${TARGET_KERNEL_OUT}" KERNEL_VARIANT=gki ./kernel_platform/build/android/prepare_vendor.sh
 fi

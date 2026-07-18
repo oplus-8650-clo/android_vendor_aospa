@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+     SPDX-FileCopyrightText: 2025 Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest>
+  <include name="../platforms/pineapple-kernel.xml" />
+  <include name="../platforms/pineapple.xml" />
+
+  <!-- Kernel Dependencies -->
+  <project remote="github" name="8650-kernel/vendor_qcom_opensource_audio-kernel" path="vendor/qcom/opensource/audio-kernel" revision="oplus-8650" >
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/audio_kernel_vendor_board.mk" src="audio_kernel_vendor_board.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/audio_kernel_product_board.mk" src="audio_kernel_product_board.mk" />
+  </project>
+
+  <project remote="github" name="8650-kernel/vendor_qcom_opensource_camera-kernel" path="vendor/qcom/opensource/camera-kernel" revision="oplus-8650" >
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/camera-kernel_board.mk" src="board.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/camera-kernel_product.mk" src="product.mk" />
+  </project>
+
+  <project remote="github" name="8650-kernel/vendor_qcom_opensource_display-drivers" path="vendor/qcom/opensource/display-drivers" revision="oplus-8650" >
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/display_driver_product.mk" src="display_driver_product.mk" />
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/display_driver_board.mk" src="display_driver_board.mk" />
+  </project>
+
+  <project remote="github" name="8650-kernel/vendor_qcom_opensource_dsp-kernel" path="vendor/qcom/opensource/dsp-kernel" revision="oplus-8650" >
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/dsp_kernel_board.mk" src="dsp_kernel_board.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/dsp_kernel_product.mk" src="dsp_kernel_product.mk" />
+  </project>
+
+  <project remote="github" name="8650-kernel/vendor_qcom_opensource_graphics-kernel" path="vendor/qcom/opensource/graphics-kernel" revision="oplus-8650" />
+
+  <project remote="github" name="8650-kernel/vendor_qcom_opensource_video-driver" path="vendor/qcom/opensource/video-driver" revision="oplus-8650" >
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/video_kernel_product.mk" src="video_kernel_product.mk" />
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/video_kernel_board.mk" src="video_kernel_board.mk" />
+  </project>
+
+  <project remote="github" name="8650-kernel/vendor_qcom_opensource_wlan_platform" path="vendor/qcom/opensource/wlan/platform" revision="oplus-8650" />
+
+  <project remote="github" name="8650-kernel/vendor_nxp_opensource_driver" path="vendor/nxp/opensource/driver" revision="oplus-8650" >
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/nfc_kernel_dlkm_vendor_product.mk" src="nfc_kernel_dlkm_vendor_product.mk" />
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/nfc_kernel_dlkm_vendor_board.mk" src="nfc_kernel_dlkm_vendor_board.mk" />
+  </project>
+
+  <project remote="github" name="8650-kernel/android_kernel_build" path="kernel_platform/build/kernel" revision="oplus-8650" >
+    <linkfile dest="kernel_platform/tools/bazel" src="kleaf/bazel.sh" />
+    <linkfile dest="kernel_platform/build/build.sh" src="build.sh" />
+    <linkfile dest="kernel_platform/build/build_abi.sh" src="build_abi.sh" />
+    <linkfile dest="kernel_platform/build/build_test.sh" src="build_test.sh" />
+    <linkfile dest="kernel_platform/build/build_utils.sh" src="build_utils.sh" />
+    <linkfile dest="kernel_platform/build/all-variants.sh" src="all-variants.sh" />
+    <linkfile dest="kernel_platform/build/brunch" src="brunch" />
+    <linkfile dest="kernel_platform/build/build_abl.sh" src="build_abl.sh" />
+    <linkfile dest="kernel_platform/build/build_module.sh" src="build_module.sh" />
+    <linkfile dest="kernel_platform/build/android/export_headers.py" src="android/export_headers.py" />
+    <linkfile dest="kernel_platform/build/android/merge_dtbs.py" src="android/merge_dtbs.py" />
+    <linkfile dest="kernel_platform/build/android/merge_dtbs.sh" src="android/merge_dtbs.sh" />
+    <linkfile dest="kernel_platform/build/android/prepare_vendor.sh" src="android/prepare_vendor.sh" />
+    <linkfile dest="kernel_platform/build/BUILD.bazel" src="BUILD.bazel" />
+    <linkfile dest="kernel_platform/build/build-tools/path" src="build-tools/path" />
+    <linkfile dest="kernel_platform/build/config.sh" src="config.sh" />
+    <linkfile dest="kernel_platform/build/envsetup.sh" src="envsetup.sh" />
+    <linkfile dest="kernel_platform/build/_setup_env.sh" src="_setup_env.sh" />
+    <linkfile dest="kernel_platform/build/multi-switcher.sh" src="multi-switcher.sh" />
+    <linkfile dest="kernel_platform/build/kleaf" src="kleaf" />
+    <linkfile dest="kernel_platform/build/abi" src="abi" />
+    <linkfile dest="kernel_platform/build/static_analysis" src="static_analysis" />
+    <linkfile dest="kernel_platform/build/_wrapper_common.sh" src="_wrapper_common.sh" />
+  </project>
+
+  <project remote="github" name="8650-kernel/android_kernel_oneplus_sm8650" path="kernel_platform/msm-kernel" revision="calcite" >
+    <linkfile dest="kernel_platform/WORKSPACE" src="bazel.WORKSPACE" />
+    <linkfile dest="kernel_platform/build_with_bazel.py" src="build_with_bazel.py" />
+    <linkfile dest="kernel_platform/build/qcom_build_extensions" src="qcom_build_extensions" />
+  </project>
+
+  <project remote="github" name="8650-kernel/kernel_platform_oplus" path="kernel_platform/oplus" revision="oplus-8650" />
+  <project remote="github" name="8650-kernel/kernel_platform_qcom_proprietary_devicetree" path="kernel_platform/qcom/proprietary/devicetree" revision="oplus-8650" />
+  <project remote="github" name="8650-kernel/vendor_oplus" path="vendor/oplus" revision="oplus-8650" />
+  <project remote="github" name="8650-kernel/vendor_qcom_proprietary" path="vendor/qcom/proprietary" revision="oplus-8650" />
+  <project remote="github" name="8650-kernel/vendor_qcom_proprietary_dsp-devicetree" path="vendor/qcom/proprietary/dsp-devicetree" revision="oplus-8650" />
+  <project remote="github" name="8650-kernel/vendor_qcom_proprietary_eva-devicetree" path="vendor/qcom/proprietary/eva-devicetree" revision="oplus-8650" />
+  <project remote="github" name="8650-kernel/vendor_qcom_proprietary_mm-sys-devicetree" path="vendor/qcom/proprietary/mm-sys-devicetree" revision="oplus-8650" />
+  <project remote="github" name="8650-kernel/vendor_qcom_proprietary_synx-devicetree" path="vendor/qcom/proprietary/synx-devicetree" revision="oplus-8650" />
+
+  <!-- Device Dependencies -->
+  <project path="device/oneplus/avalon" name="oplus-8650-clo/android_device_oneplus_avalon" remote="aospa" />
+  <project path="device/oneplus/sm8650-common" name="oplus-8650-clo/android_device_oneplus_sm8650-common" remote="aospa" />
+  <project path="hardware/oplus" name="oplus-8650-clo/android_hardware_oplus" remote="aospa" />
+
+</manifest>
+

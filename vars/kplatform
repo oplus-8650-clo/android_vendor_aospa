@@ -1,5 +1,5 @@
 #!/bin/bash
 
 declare -A KPLATFORM_ARRAY=(
-    ["pineapple"]="LA.VENDOR.14.3.0.r1-22900-lanai.QSSI16.0"
+    ["pineapple"]="LA.VENDOR.14.3.0.r1-23500-lanai.QSSI16.0"
 )

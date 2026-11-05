@@ -4,7 +4,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest>
-  <project path="hardware/qcom/display" name="AOSPA/android_hardware_qcom_display" remote="aospa" revision="calcite-8650" >
+  <project path="hardware/qcom/display" name="oplus-8650-clo/android_hardware_qcom_display" remote="aospa" revision="calcite-8650" >
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/display-techpack.mk" src="config/display-techpack.mk"/>
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/display-product.mk" src="config/display-product.mk"/>
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/display-board.mk" src="config/display-board.mk"/>
@@ -13,12 +13,11 @@
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/gps-product-hal.mk" src="gps_vendor_product.mk"/>
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/gps-board.mk" src="gps_vendor_board.mk"/>
   </project>
-  <project path="vendor/qcom/opensource/agm" name="AOSPA/android_vendor_qcom_opensource_agm" remote="aospa" revision="calcite-8650" />
-  <project path="vendor/qcom/opensource/audio-hal/primary-hal" name="AOSPA/android_hardware_qcom_audio" remote="aospa" revision="calcite-8650">
-    <linkfile dest="vendor/qcom/defs/product-defs/vendor/audio_vendor_product.mk" src="configs/audio_vendor_product.mk" />
+  <project path="vendor/qcom/opensource/agm" name="oplus-8650-clo/android_vendor_qcom_opensource_agm" remote="aospa" revision="calcite-8650" />
+  <project path="vendor/qcom/opensource/audio-hal/primary-hal" name="oplus-8650-clo/android_hardware_qcom_audio" remote="aospa" revision="calcite-8650">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/audio-techpack.mk" src="configs/pineapple/audio-techpack.mk" />
   </project>
   <project path="vendor/qcom/opensource/audioreach-graphservices" name="AOSPA/android_vendor_qcom_opensource_audioreach-graphservices" remote="aospa" revision="calcite-8650" />
-  <project path="vendor/qcom/opensource/pal" name="AOSPA/android_vendor_qcom_opensource_arpal-lx" remote="aospa" revision="calcite-8650" />
+  <project path="vendor/qcom/opensource/pal" name="oplus-8650-clo/android_vendor_qcom_opensource_arpal-lx" remote="aospa" revision="calcite-8650" />
   <project path="vendor/qcom/opensource/audio-hal/st-hal-ar" name="AOSPA/android_vendor_qcom_opensource_audio-hal_st-hal-ar" remote="aospa" revision="calcite-8650" />
 </manifest>

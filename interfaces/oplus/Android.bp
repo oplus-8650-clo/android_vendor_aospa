@@ -1,0 +1,32 @@
+aidl_interface {
+    name: "vendor.oplus.hardware.oplusvibrator",
+    vendor_available: true,
+    srcs: [
+        "vendor/oplus/hardware/oplusvibrator/*.aidl",
+    ],
+    stability: "vintf",
+    imports: [
+        "vendor.aac.hardware.richtap.vibrator-V2",
+    ],
+    backend: {
+        java: {
+            platform_apis: true,
+        },
+        ndk: {
+            enabled: false,
+        },
+        cpp: {
+            enabled: false,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: ["vendor.aac.hardware.richtap.vibrator-V2"],
+        },
+        {
+            version: "2",
+            imports: ["vendor.aac.hardware.richtap.vibrator-V2"],
+        },
+    ],
+}

@@ -227,6 +227,7 @@ if [ -d "$DIR_ROOT/kernel_platform/" ] && (
         EXTRA_KERNEL_FLAGS+=' RECOMPILE_MERGE_DTBS=0'
     fi
     DTBO_TARGET="${DEVICE}" eval "${EXTRA_KERNEL_FLAGS}" ANDROID_KERNEL_OUT="${TARGET_KERNEL_OUT}" KERNEL_VARIANT=gki ./kernel_platform/build/android/prepare_vendor.sh
+    checkExit
 fi
 
 # Build a specific module(s)
